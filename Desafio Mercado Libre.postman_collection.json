@@ -1,0 +1,102 @@
+{
+	"info": {
+		"_postman_id": "196116bb-2b3a-4631-9e8f-ff275b980061",
+		"name": "Desafio Mercado Libre",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "mutant Mutante",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"dna\": [\n        \"ATGCGA\",\n        \"CAGTGC\",\n        \"TTATGT\",\n        \"AGAAGG\",\n        \"CCCCTA\",\n        \"TCACTG\"\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/mutant",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"mutant"
+					]
+				},
+				"description": "crear el servicio “/mutant/” en donde se pueda detectar si un humano es\nmutante enviando la secuencia de ADN mediante un HTTP POST con un Json el cual tenga el\nsiguiente formato:\nPOST → /mutant/\n{\n“dna”:[\"ATGCGA\",\"CAGTGC\",\"TTATGT\",\"AGAAGG\",\"CCCCTA\",\"TCACTG\"]\n}\nEn caso de verificar un mutante, debería devolver un HTTP 200-OK, en caso contrario un\n403-Forbidden"
+			},
+			"response": []
+		},
+		{
+			"name": "mutant No-Mutante",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"dna\": [\n        \"ATGCGA\",\n        \"CAGTGC\",\n        \"TTATTT\",\n        \"AGACGG\",\n        \"GCGTCA\",\n        \"TCACTG\"\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/mutant",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"mutant"
+					]
+				},
+				"description": "crear el servicio “/mutant/” en donde se pueda detectar si un humano es\nmutante enviando la secuencia de ADN mediante un HTTP POST con un Json el cual tenga el\nsiguiente formato:\nPOST → /mutant/\n{\n“dna”:[\"ATGCGA\",\"CAGTGC\",\"TTATGT\",\"AGAAGG\",\"CCCCTA\",\"TCACTG\"]\n}\nEn caso de verificar un mutante, debería devolver un HTTP 200-OK, en caso contrario un\n403-Forbidden"
+			},
+			"response": []
+		},
+		{
+			"name": "Statistics stats",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/stats",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"stats"
+					]
+				},
+				"description": "test"
+			},
+			"response": []
+		}
+	]
+}
